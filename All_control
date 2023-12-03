@@ -1,0 +1,12 @@
+//Select all
+private void Select()
+{
+  DataTable sv = SqlQuery.SelectAll();
+  GridViewSinhVien.DataSource = sv;
+  GridViewSinhVien.DataBind();
+}
+
+//add
+string cmd = $"INSERT INTO [QuanLySinhVien].[dbo].[SinhVien] ([MaSV] ,[HoSV] ,[TenSV],[NgaySinh],[GioiTinh],[MaKhoa]) VALUES  ('{masv}','{hosv}','{tensv}','{ngaysinh}','{gioitinh}','{makhoa}')";
+
+//update
