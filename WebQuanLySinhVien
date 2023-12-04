@@ -1,0 +1,148 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebQuanLySinhVien.aspx.cs" Inherits="webSQLSinhVien.WebQuanLySinhVien" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Quản lý sinh viên</title>
+    
+    <style>
+body {
+    width: auto;
+    text-align: center;
+     
+}
+
+.quan_ly_sinh_vien {
+    width: 800px;
+    height: 700px;
+    margin: auto;
+}
+
+.tieu_de {
+    
+}
+
+.nhap_lieu {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+}
+    .nhap_lieu input {
+        
+        width: 150px;
+        height: 20px;
+    }
+
+.du_lieu{
+    display: flex;
+    justify-content: center;
+}
+
+.control_button{
+    display: flex;
+    justify-content: center;
+}
+
+    .control_button input{
+        width: 180px;
+        height: 30px;
+        margin: 9px 0px 0px 3px;
+    }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="quan_ly_sinh_vien">
+            <div class="tieu_de">
+                <h1>Chương Trình Quản Lý Sinh Viên</h1>
+            </div>
+            <div class="nhap_lieu">
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Label ID="Label1" runat="server" Text="Mã SV"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtMasv" runat="server"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:Label ID="Label2" runat="server" Text="Họ SV"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtHosv" runat="server"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:Label ID="Label3" runat="server" Text="Tên SV"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtTensv" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="Label4" runat="server" Text="Ngày Sinh"></asp:Label>
+                        </td>
+                        <td>
+                            <input type="date" id="txtNgaySinh" runat="server"  name="txtNgaySinh"/>
+                        </td>
+                        <td>
+                            <asp:Label ID="Label5" runat="server" Text="Giới tính"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownListGioiTinh" runat="server">
+                                <asp:ListItem>Nam</asp:ListItem>
+                                <asp:ListItem>Nữ</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                        <td>
+                            <asp:Label ID="Label6" runat="server" Text="Mã Khoa"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtMakhoa" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="du_lieu">
+                <asp:GridView ID="GridViewSinhVien" runat="server" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="MaSV" HeaderText="MaSV" SortExpression="MaSV"></asp:BoundField>
+                        <asp:BoundField DataField="HoSV" HeaderText="HoSV" SortExpression="HoSV"></asp:BoundField>
+                        <asp:BoundField DataField="TenSV" HeaderText="TenSV" SortExpression="TenSV"></asp:BoundField>
+                        <asp:BoundField DataField="NgaySinh" HeaderText="NgaySinh" SortExpression="NgaySinh"></asp:BoundField>
+                        <asp:BoundField DataField="GioiTinh" HeaderText="GioiTinh" SortExpression="GioiTinh"></asp:BoundField>
+                        <asp:BoundField DataField="MaKhoa" HeaderText="MaKhoa" SortExpression="MaKhoa"></asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+            </div>
+            <div class="control_button">
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Button ID="btSelect" runat="server" Text="Lấy tất cả" OnClick="btSelect_Click" /></td>
+                        <td>
+                            <asp:Button ID="btAdd" runat="server" Text="Thêm sinh viên" OnClick="btAdd_Click" /></td>
+                        <td>
+                            <asp:Button ID="btUpdate" runat="server" Text="Sửa sinh viên" OnClick="btUpdate_Click" /></td>
+                        <td>
+                            <asp:Button ID="btRemove" runat="server" Text="Xóa sinh viên" OnClick="btRemove_Click" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="btCancel" runat="server" Text="Hủy nhập" OnClick="btCancel_Click" /></td>
+                        <td>
+                            <asp:Button ID="btExit" runat="server" Text="Thoát" OnClick="btExit_Click" /></td>
+                        <td>
+                            <asp:Button ID="btTotal" runat="server" Text="Đếm tổng số SV" OnClick="btTotal_Click" /></td>
+                        <td>
+                            <asp:Button ID="btRandom" runat="server" Text="Ngẫu nhiên SV " OnClick="btRandom_Click" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
