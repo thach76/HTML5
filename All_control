@@ -10,3 +10,7 @@ private void Select()
 string cmd = $"INSERT INTO [QuanLySinhVien].[dbo].[SinhVien] ([MaSV] ,[HoSV] ,[TenSV],[NgaySinh],[GioiTinh],[MaKhoa]) VALUES  ('{masv}','{hosv}','{tensv}','{ngaysinh}','{gioitinh}','{makhoa}')";
 
 //update
+string cmd = $"UPDATE [QuanLySinhVien].[dbo].[SinhVien] SET [HoSV] = '{hosv}',[TenSV] = '{tensv}',[NgaySinh] = '{ngaysinh}',[GioiTinh] = '{gioitinh}',[MaKhoa] = '{makhoa}' WHERE [MaSV] = '{masv}';";
+
+//delete
+string cmd = $"DELETE [QuanLySinhVien].[dbo].[SinhVien] WHERE [MaSV] = '{masv}';";
