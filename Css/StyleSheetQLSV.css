@@ -1,0 +1,35 @@
+﻿body {
+    width: auto;
+    text-align: center;
+}
+
+.quan_ly_sinh_vien {
+    width: 800px;
+    height: 700px;
+}
+
+.tieu_de {
+    
+}
+
+.nhap_lieu {
+}
+    .nhap_lieu input {
+        
+        width: 150px;
+        height: 20px;
+    }
+
+.du_lieu{
+    
+}
+
+.control_button{
+
+}
+
+    .control_button input {
+        width: 180px;
+        height: 30px;
+        margin: 9px 0px 0px 3px;
+    }

@@ -1,0 +1,70 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.con_ten_no {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dang_nhap {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Thêm kiểu cho form và các phần tử bên trong */
+form {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+/* Thêm kiểu cho các nút và liên kết */
+.btSingin {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.txtInput{
+    width: 300px;
+}
+
+.cbNhoToi{
+
+}
+    .cbNhoToi input {
+        width: 16px;
+        height: 16px;
+    }
+
+    .cbNhoToi label {
+        font-size: 16px;
+    }
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
